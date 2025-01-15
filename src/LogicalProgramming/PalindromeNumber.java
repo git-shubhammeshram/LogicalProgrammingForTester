@@ -1,17 +1,17 @@
 package LogicalProgramming;
 
-public class ArmstrongNumber {
+public class PalindromeNumber {
     public static void main(String[] args) {
-        int number = 121;
+        int number = 16461;
         int original = number;
-        int r, sum = 0;
+        int r=0;
 
         while(number>0){
-            r = number%10;
+            r = r*10 + number%10;
             number = number/10;
-            sum = sum+r*r*r;
         }
-        if(original == sum)
+
+        if(original == r)
             System.out.println(1);
         else
             System.out.println(0);
